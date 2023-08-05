@@ -1,5 +1,5 @@
-import tkinter as tk
 from tkinter import *
+import tkinter as tk
 from PIL import Image, ImageTk
 import threading
 import os
@@ -45,7 +45,6 @@ class starting(threading.Thread):
     def start_game(self):
         
         self.start_load()
-        
 
 if __name__ == "__main__":
     starting(80).start()
