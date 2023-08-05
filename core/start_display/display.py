@@ -1,12 +1,13 @@
 from tkinter import *
 import tkinter as tk
-from PIL import Image, ImageTk
 import threading
 import os
+import pip
+from PIL import Image, ImageTk
 
 
-class starting(threading.Thread):
-    def __init__(self, size=90):
+class starting():
+    def __init__(self, size=90): #생성자
 
         #GUI 구성
         self.root = Tk()
@@ -35,15 +36,16 @@ class starting(threading.Thread):
         start_button.place(x=self.window_width/2-130, y=self.window_height/2-100)
         self.root.mainloop()
     
-    def start_load(self):
-        self.root.quit()
-        
-    
-    def load(self):
+    def start_load(self):   #로딩화면
+        #self.root.quit()
         pass
         
-    def start_game(self):
+    
+    def load(self): #로딩(계산)
+        pip.main(["install", "-r", "requirements.txt"])
         
+    def start_game(self):
+        threading.Thread(target=self.load).start()
         self.start_load()
 
 if __name__ == "__main__":
