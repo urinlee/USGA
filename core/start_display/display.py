@@ -32,7 +32,7 @@ class starting():
         label.place(x=-2, y=-2, relwidth=1, relheight=1)
 
         #start button
-        start_button = Button(text="시작하기", borderwidth=0, background="black", width=20, height=3, command=self.start_game)
+        start_button = Button(text="시작하기", borderwidth=0, background="white", width=20, height=3, command=self.start_game)
         start_button.place(x=self.window_width/2-130, y=self.window_height/2-100)
         self.root.mainloop()
     

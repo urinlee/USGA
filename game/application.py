@@ -29,3 +29,5 @@ def input(key):
     if key == 'tab':    # press tab to toggle edit/play mode
         ec.enabled = not ec.enabled
         player.enabled = not player.enabled
+
+app.run()
