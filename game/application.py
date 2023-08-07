@@ -1,28 +1,13 @@
 from ursina import *
-from ursina.prefabs import editor_camera
+from ext import camera
 
-app = Ursina(vsync=False)
-'''
-Simple camera for debugging.
-Hold right click and move the mouse to rotate around point.
-'''
-
+app = Ursina()
 sky = Sky()
-e = Entity(model=load_model('cube', use_deepcopy=True), color=color.white, collider='box')
-e.model.colorize()
-
-from ursina.prefabs.first_person_controller import FirstPersonController
-
-ground = Entity(model='plane', scale=32, texture='white_cube', texture_scale=(32,32), collider='box')
-box = Entity(model='cube', collider='box', texture='white_cube', scale=(10,2,2), position=(2,1,5), color=color.light_gray)
-player = FirstPersonController(y=1, enabled=True)
-
-ec = EditorCamera()
-ec.enabled = False
-rotation_info = Text(position=window.top_left)
+#Camera
+player = camera.Camera(start_position=(0, 10, 0))
 
 def update():
-    rotation_info.text = str(int(ec.rotation_y)) + '\n' + str(int(ec.rotation_x))
+    print(player.rotation)
 
 
 def input(key):
