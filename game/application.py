@@ -1,13 +1,15 @@
 from ursina import *
-from ext import camera
+from ext import player_camera
 
 app = Ursina()
 sky = Sky()
 #Camera
-player = camera.Camera(start_position=(10, 10, 10))
+player = player_camera.Camera(start_position=(20, 5, -20), speed=0.2)
+
+print(camera.fov)
 
 
-e = Entity(model='graphic/room.obj', texture='graphic/room.png', rotation_y=0, scale_x=-1, scale_y=1, scale_z=-1)
+e = Entity(model='graphic/room', texture='graphic/room.png', rotation_y=180)
 
 
 def input(key):

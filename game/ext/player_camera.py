@@ -9,6 +9,7 @@ class Camera(EditorCamera):
         self.rotation = (45, -45)
         self.start_position = start_position
         self.speed = speed
+        self.position = start_position
 
 
     def update(self):
