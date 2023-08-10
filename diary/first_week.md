@@ -9,4 +9,5 @@
 
 #### 1.1. 화면크기
 
+![image](https://github.com/urinlee/USGA/assets/62046969/c75747ce-0e00-4522-95a3-b95ee0246a10)
 
