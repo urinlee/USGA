@@ -1,4 +1,4 @@
-[디렉토리]()
+![디렉토리](diary/first/directories.png)
 
 
 # 1. 시작화면
