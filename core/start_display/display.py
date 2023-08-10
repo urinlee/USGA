@@ -14,12 +14,12 @@ class starting():
         self.root.title("MOLA Game Cient") #앱 이름
 
         #화면 정보
-        self.monitor_width = self.root.winfo_screenwidth()
-        self.monitor_height = self.root.winfo_screenheight()
-        self.window_width = int(self.monitor_width * (size / 100))
-        self.window_height = int(self.monitor_height * (size / 100))
-        self.start_winx = int((self.monitor_width - self.window_width) / 2)
-        self.start_winy = int((self.monitor_height - self.window_height) / 2)
+        self.monitor_width = self.root.winfo_screenwidth()      #모니터 가로
+        self.monitor_height = self.root.winfo_screenheight()    #모니터 세로
+        self.window_width = int(self.monitor_width * (size / 100))      #윈도우 가로
+        self.window_height = int(self.monitor_height * (size / 100))    #윈도우 세로
+        self.start_winx = int((self.monitor_width - self.window_width) / 2)     #윈도우 시작 위치_X
+        self.start_winy = int((self.monitor_height - self.window_height) / 2)   #윈도우 시작 위치_Y
         
         self.root.geometry(f"{self.window_width}x{self.window_height}+{self.start_winx}+{self.start_winy}")
 
