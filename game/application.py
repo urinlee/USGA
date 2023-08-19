@@ -24,6 +24,8 @@ def input(key):
     if key == 'tab':    # press tab to toggle edit/play mode
         # print(str(player.position))
         # level.level += 1
-        app_window.Shop_window()
+        a = app_window.Shop_window()
+
+
 
 app.run()
