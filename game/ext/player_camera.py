@@ -44,7 +44,7 @@ class Camera(EditorCamera):
                 self.z -= self.speed
         
         try:
-            super().update()
+            pass
         except:
             pass
         
