@@ -64,8 +64,9 @@ class Shop_window(Entity):
                 y = item[1]
 
                 b = Button(parent=self.item_container, model="quad",texture="/../sources/item_frame.png" ,x=x, y=y, world_scale=4.8, origin=(0, 0), color=color.dark_gray, highlight_scale=1.1, highlight_color=color.black)
-                e = Entity(parent=b, model="cube", texture="white_cube", scale=0.5, rotation_x=45, rotation_y=30)
+                e = Entity(parent=b, model="src/Chair 1", texture="src/Chair 1.png", scale=0.01, rotation_x=45, rotation_y=30, z=-10)
                 print(f"test  {x},{y}")
+                time.sleep(1)
         
 
     
