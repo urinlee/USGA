@@ -2,6 +2,11 @@ from ursina import *
 from ext import player_camera
 from UI import Level, Side, app_window
 
+
+
+
+
+
 app = Ursina()
 sky = Sky()#Sky(color=color.rgb(64, 64, 64))
 #Camera
