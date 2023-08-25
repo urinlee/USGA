@@ -1,0 +1,45 @@
+{
+    "yellow_chair":{
+        "price":170,
+        "effect":{
+            "people":5,
+            "feel":10
+        }
+    },
+    "blue_chair":{
+        "price":150,
+        "effect":{
+            "people":8,
+            "feel":10
+        }
+    },
+    "purple_chair":{
+        "price":170,
+        "effect":{
+            "people":5,
+            "feel":15
+        }
+    },
+    "trash_can":{
+        "price":170,
+        "effect":{ 
+            "feel":15
+        }
+    },
+    "blue_table":{
+        "price":200,
+        "effect":{
+            "people":10,
+            "feel":10
+        }
+    },
+    "purple_table":{
+        "price":200,
+        "effect":{
+            "people":10,
+            "feel":10
+        }
+    }
+    
+
+}

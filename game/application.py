@@ -1,7 +1,6 @@
 from ursina import *
-from ext import player_camera
-from UI import Level, Side, app_window
-
+from ext import player_camera, Voxel_object
+from UI import app_window, Level, Money, Shop, Side
 
 
 
@@ -16,10 +15,12 @@ player.zoom=3
 print(camera.fov)
 
 
-room = Entity(model='src/room', texture='src/room.png', rotation_y=180)
-apart = Entity(model='cube', collider='box', texture='cube', scale=(32, 2000, 32), position=(0,-1016,0), color=color.rgb(64, 64, 64))
+room = Entity(model='src/restaurant', texture='src/restaurant.png', rotation_y=180, scale=0.24)
+#apart = Entity(model='cube', collider='box', texture='cube', scale=(32, 2000, 32), position=(0,-1016,0), color=color.rgb(64, 64, 64))
+Voxel_object.Voxel(position=(0, 10, 0))
 level = Level.Top_UI()
 side = Side.Side_Menu()
+money = Money.Money()
 print(level.position)
 level.position = (0, 0.42)
 
@@ -29,7 +30,7 @@ def input(key):
     if key == 'tab':    # press tab to toggle edit/play mode
         # print(str(player.position))
         # level.level += 1
-        a = app_window.Shop_window()
+        a = Shop.shop()
 
 
 

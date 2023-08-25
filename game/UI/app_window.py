@@ -13,11 +13,12 @@ class Shop_window_front(Entity):
         self.disable()
 
 
-class Shop_window(Entity):
+class window(Entity):
 
     
 
     def __init__(self, name:str = "shop") -> None:
+
 
 
         self.back_blind = Entity(parent=camera.ui,
@@ -43,33 +44,8 @@ class Shop_window(Entity):
         self.cancel.on_click = self.invisibled
 
 
-        self.item_container = Entity(parent=self.win, model="quad", world_scale_y=10, world_scale_x=15, color=color.rgb(0, 0, 0, 0))
-
-        #self.test_pos = Entity(parent=self.item_container, model="quad", x=0.5, y=0.5, scale=0.01, color=color.red)
-
-        self.item_pos = [[n for n in range(ITEM_IN_COUNT)]for i in range(ITEM_LINE)]
-
-        print(self.item_pos)    
-
-        for num, section in enumerate(self.item_pos, 0):
-            self.item_pos[num] = list(map(lambda a: (
-                                                    round(-0.5 + ((a+0.5)/(len(section))), 10) , 
-                                                    round(0.5-((num+0.5)/(len(self.item_pos))), 10)), 
-                                                    section))
-        print(self.item_pos)
-
-        for row in range(len(self.item_pos)):
-            for item in self.item_pos[row]:
-                x = item[0]
-                y = item[1]
-
-                b = Button(parent=self.item_container, model="quad",texture="/../sources/item_frame.png" ,x=x, y=y, world_scale=4.8, origin=(0, 0), color=color.dark_gray, highlight_scale=1.1, highlight_color=color.black)
-                e = Entity(parent=b, model="src/Chair 1", texture="src/Chair 1.png", scale=0.01, rotation_x=45, rotation_y=30, z=-10)
-                print(f"test  {x},{y}")
-                time.sleep(1)
         
 
-    
 
 
     def invisibled(self):
