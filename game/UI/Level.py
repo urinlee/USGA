@@ -29,7 +29,7 @@ class Top_UI(Entity):
 
     
     def update(self):   ##  @@update
-        self.xp += self.level
+        #self.xp += self.level
         self.change_xp()
         self.change_level()
 

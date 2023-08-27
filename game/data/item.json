@@ -1,4 +1,5 @@
 {
+    
     "yellow_chair":{
         "price":170,
         "effect":{
@@ -20,12 +21,9 @@
             "feel":15
         }
     },
-    "trash_can":{
-        "price":170,
-        "effect":{ 
-            "feel":15
-        }
-    },
+    
+
+    
     "blue_table":{
         "price":200,
         "effect":{
@@ -39,7 +37,16 @@
             "people":10,
             "feel":10
         }
+    },
+    
+    
+    "trash_can":{
+        "price":170,
+        "effect":{ 
+            "feel":15
+        }
     }
+    
     
 
 }
