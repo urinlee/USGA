@@ -2,16 +2,18 @@ from ursina import *
 
 #Camera
 class Camera(EditorCamera):
-    def __init__(self, speed = 0.05, start_position = (0, 20, 0)):  #생성자
-        super().__init__()
-        self.move_speed = 0,
-        self.rotation_speed = 0,
-        self.rotation = (45, -45)
-        self.start_position = start_position
+    def __init__(self, speed = 10, start_position = (0, 20, 0)):  #생성자
+        super().__init__(
+            name="camera",
+            move_speed = 0,
+            rotation_speed = 0,
+            rotation = (45, -45),
+            start_position = start_position,
+            position = start_position,
+            max_zoom = 45,
+            zoom_smoothing = 0
+        )
         self.speed = speed
-        self.position = start_position
-        self.max_zoom = 45
-        self.zoom_smoothing = 0
         self.bounce = 350
 
 
@@ -28,20 +30,20 @@ class Camera(EditorCamera):
 
         else:
             if held_keys["w"]:
-                self.x -= self.speed
-                self.z += self.speed
+                self.x -= self.speed * time.dt
+                self.z += self.speed * time.dt
             
             if held_keys["s"]:
-                self.x += self.speed
-                self.z -= self.speed
+                self.x += self.speed * time.dt
+                self.z -= self.speed * time.dt
             
             if held_keys["d"]:
-                self.x += self.speed
-                self.z += self.speed
+                self.x += self.speed * time.dt
+                self.z += self.speed * time.dt
             
             if held_keys["a"]:
-                self.x -= self.speed
-                self.z -= self.speed
+                self.x -= self.speed * time.dt
+                self.z -= self.speed * time.dt
         
         try:
             pass

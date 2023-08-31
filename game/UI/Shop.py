@@ -46,7 +46,6 @@ class shop(app_window.window):
                 #print(str(list(db.keys())[number]))
 
                 self.create_item_frame(db, row, column, item)
-                time.sleep(0.02)
 
 
     
@@ -56,6 +55,7 @@ class shop(app_window.window):
 
     
     def click_item(self, item_name):
+        self.invisibled()
         object_item = Voxel_object.Voxel(model=f"src/{item_name}", texture=f'src/{item_name}.png', position=(0, 1, 0), scale=0.05)
         Editor(object_item)
     

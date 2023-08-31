@@ -1,5 +1,5 @@
 from ursina import *
-from ext import player_camera, Voxel_object
+from ext import player_camera, Voxel_object, NPC
 from ext.edit_object import Editor
 from UI import app_window, Level, Money, Shop, Side
 
@@ -10,7 +10,7 @@ from UI import app_window, Level, Money, Shop, Side
 app = Ursina()
 sky = Sky()#Sky(color=color.rgb(64, 64, 64))
 #Camera
-player = player_camera.Camera(start_position=(20, 20, -20), speed=0.2)
+player = player_camera.Camera(start_position=(20, 20, -20), speed=15)
 player.zoom=3
 
 
@@ -18,7 +18,11 @@ player.zoom=3
 print(camera.fov)
 
 
-room = Entity(model='src/restaurant', texture='src/restaurant.png', rotation_y=180, scale=0.24)
+room = Entity(model='src/restaurant_mood', texture='src/restaurant_mood.png', rotation_y=180, scale=0.24)
+npc = NPC.npc(name="John")
+npc.move_to((5, 1, -5))
+npc.move_to((6, 1, -6))
+#person = Entity(model='src/person.obj', scale=0.7, rotation_x=-90, x=5, z=-5, y=1, color=color.red)
 #room_floor = Entity(parent=scene, model='src/restaurant_floor', texture='src/restaurant_floor.png', position=(0, 0.1, 0), origin=(0.5, 0.5, 0.5))
 #apart = Entity(model='cube', collider='box', texture='cube', scale=(32, 2000, 32), position=(0,-1016,0), color=color.rgb(64, 64, 64))
 

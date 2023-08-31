@@ -5,6 +5,7 @@ from ursina import *
 class Voxel(Button):
     def __init__(self, position=(0, 10, 0), model="cube", texture="white_cube", scale:Vec3|int =(1, 1, 1)):
         super().__init__(
+            name=f"object.{model}.{random.randint(0, 9999999)})",
             parent=scene,
             position=position,
             model=model,

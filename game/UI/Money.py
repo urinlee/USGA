@@ -6,7 +6,7 @@ from ursina import *
 class Money(Entity):
 
     def __init__(self):
-        self = Entity(parent=camera.ui, 
+        super().__init__(parent=camera.ui, 
                       model="quad",
                       scale_x=0.4,
                       scale_y=0.1,

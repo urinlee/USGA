@@ -6,7 +6,8 @@ _MENU_COUNT = 6
 class Side_Menu(Entity):
     def __init__(self) -> None:
         #메뉴바
-        self = Entity(model='quad',
+        super().__init__(model='quad',
+                      name="side_bar",
                       parent=camera.ui,  #2D UI
                       scale=(0.09,0.65),
                       y=0,

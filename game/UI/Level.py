@@ -7,10 +7,11 @@ import time
 
 class Top_UI(Entity):
     def __init__(self, level:int = 1, xp:int = 0) -> None:
-        super().__init__()
-        test = Entity()
-        self.parent = camera.ui
-        self.scale = 3
+        super().__init__(
+            parent = camera.ui,
+            scale = 3,
+            name="top_ui"
+        )
         self.level = level
         self.history_level = level
         self.history_xp = xp
