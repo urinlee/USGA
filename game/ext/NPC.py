@@ -27,7 +27,20 @@ class npc(Button):
     
     def update(self):
         #NPC 움직이는 코드
-        if self.move_x:     #움직여야 할 x좌표가 있다면
+
+        if self.move_z:   #움직여야 할 y좌표가 있다면(둘다 있다면 z좌표 먼저)
+            normalized = self.move_z / abs(self.move_z)
+            move_distance = normalized * time.dt * self.speed
+            after = (self.move_z - move_distance) / abs(self.move_z - move_distance)
+            
+            if after == normalized:
+                self.z += move_distance 
+                self.move_z -= move_distance
+            else:
+                self.z += self.move_z
+                self.move_z = None
+
+        elif self.move_x:     #움직여야 할 x좌표가 있다면
             normalized = self.move_x / abs(self.move_x)
             move_distance = normalized * time.dt * self.speed
             after = (self.move_x - move_distance) / abs(self.move_x - move_distance)
@@ -40,17 +53,6 @@ class npc(Button):
                 self.move_x = None
 
         
-        elif self.move_z:   #움직여야 할 y좌표가 있다면(둘다 있다면 x좌표 먼저)
-            normalized = self.move_z / abs(self.move_z)
-            move_distance = normalized * time.dt * self.speed
-            after = (self.move_z - move_distance) / abs(self.move_z - move_distance)
-            
-            if after == normalized:
-                self.z += move_distance 
-                self.move_z -= move_distance
-            else:
-                self.z += self.move_z
-                self.move_z = None
 
 
 
