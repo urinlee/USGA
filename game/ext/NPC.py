@@ -52,6 +52,9 @@ class npc(Button):
                 self.x += self.move_x
                 self.move_x = None
 
+        #any(list(filter(lambda a:str(a.name).startswith("object") ,self.collision))):
+        print(self.collider)
+
         
 
 
