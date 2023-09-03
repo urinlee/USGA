@@ -11,7 +11,7 @@ class Side_Menu(Entity):
                       parent=camera.ui,  #2D UI
                       scale=(0.09,0.65),
                       y=0,
-                      x=0.7,
+                      x=0.85,
                       collider="box",
                       color=color.light_gray)
         section = [-0.5 + (i/(_MENU_COUNT+1)) for i in range(1, _MENU_COUNT+1)]
