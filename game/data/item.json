@@ -41,9 +41,24 @@
     
     
     "trash_can":{
-        "price":170,
+        "price":20,
         "effect":{ 
-            "feel":15
+            "feel":5
+        }
+    },
+
+    "simple_plant":{
+        "price":200,
+        "effect":{
+            "feel":12
+        }
+    },
+
+    "red_fruit_plant":{
+        "price":300,
+        "effect":{
+            "people":10,
+            "feel":24
         }
     }
     

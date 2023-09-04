@@ -12,9 +12,13 @@ class Voxel(Button):
             texture=load_texture(texture),
             scale = scale,
             color=color.color(0, 0, 1),
+            collider="cube",
+            origin = (-12.5, 0, 12.5)
         )
         print("make")
         print(self.position)
+
+    
     
     
     

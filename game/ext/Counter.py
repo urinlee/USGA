@@ -62,6 +62,7 @@ class counter(Entity):
         
         
         if self.processing is not None and self.processing.buying == 0:
+            messaging.message(self, msg="coin.png",y_up=2, time=1)
             print("tttttest")
             self.processing.buying = None
             seat = self.processing.seat
