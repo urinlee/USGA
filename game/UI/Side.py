@@ -1,5 +1,5 @@
 from ursina import *
-from UI import Shop
+from UI import Shop, player_info
 import time
 
 _MENU_COUNT = 6
@@ -24,4 +24,6 @@ class Side_Menu(Entity):
 
 
         self.buttons[0].on_click = Shop.shop
+
+        self.buttons[1].on_click = player_info.INFO_WIN
 

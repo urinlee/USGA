@@ -22,7 +22,7 @@ class window(Entity):
 
 
         self.back_blind = Entity(parent=camera.ui,
-                            name="window." + str(id(super())),
+                            name= name+"." + str(id(super())),
                             model="quad",
                             scale=10,
                             color=color.rgb(0, 0, 0, 180),
@@ -30,7 +30,7 @@ class window(Entity):
                             )
 
         self.win = Entity(parent=camera.ui, 
-                             name="window." + str(id(super())),
+                             name= name+"." + str(id(super())),
                              model='quad', 
                              texture=load_texture("/../sources/window.png"),
                              origin=(0,0),  
@@ -45,8 +45,10 @@ class window(Entity):
         #self.cancel_container = Entity(parent=self, model="circle", origin=(0.5,0.5), scale_x=0.0, scale_y=0.1, x=cancel[0], y=cancel[1])
 
         #취소버튼(red_color, left_top, circle)
-        self.cancel = Button(name="shop." + str(id(super())), parent=self.win, model="circle", color=color.red, world_scale=0.3, x=-0.4145, y=0.376)
+        self.cancel = Button(name=name+"." + str(id(super())), parent=self.win, model="circle", color=color.red, world_scale=0.3, x=-0.4145, y=0.376)
         self.cancel.on_click = self.invisibled
+
+        self.win_name = name
 
 
         
@@ -54,7 +56,7 @@ class window(Entity):
 
 
     def invisibled(self):
-        entities = [i for i in scene.entities if str(i.name).startswith("window.")]
+        entities = [i for i in scene.entities if str(i.name).startswith(self.win_name)]
         for n in entities:
             n.disable()
             del n
@@ -66,6 +68,6 @@ class window(Entity):
     
     def input(self, key):
         print(key)
-        if key == "tab":
+        if key == "esc":
             self.invisibled()
 
