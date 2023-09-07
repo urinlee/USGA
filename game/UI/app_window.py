@@ -4,6 +4,8 @@ ITEM_SPACE = 0.1
 ITEM_LINE = 2
 ITEM_IN_COUNT = 3
 
+ALREADY = False
+
 
 
 class Shop_window_front(Entity):
@@ -18,9 +20,9 @@ class window(Entity):
     
 
     def __init__(self, name:str = "window") -> None:
-
-
-
+        self.win_name = name
+        self.invisibled()
+        
         self.back_blind = Entity(parent=camera.ui,
                             name= name+"." + str(id(super())),
                             model="quad",
@@ -48,7 +50,7 @@ class window(Entity):
         self.cancel = Button(name=name+"." + str(id(super())), parent=self.win, model="circle", color=color.red, world_scale=0.3, x=-0.4145, y=0.376)
         self.cancel.on_click = self.invisibled
 
-        self.win_name = name
+
 
 
         
@@ -56,13 +58,17 @@ class window(Entity):
 
 
     def invisibled(self):
-        entities = [i for i in scene.entities if str(i.name).startswith(self.win_name)]
-        for n in entities:
-            n.disable()
-            del n
-        self.back_blind.disable()
-        self.win.disable()
-        del self
+        try:
+            entities = [i for i in scene.entities if str(i.name).startswith(self.win_name)]
+            for n in entities:
+                n.disable()
+                del n
+            
+            self.back_blind.disable()
+            self.win.disable()
+            del self
+        except:
+            pass
     
 
     
@@ -70,4 +76,6 @@ class window(Entity):
         print(key)
         if key == "esc":
             self.invisibled()
+    
+
 

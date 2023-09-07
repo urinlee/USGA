@@ -1,0 +1,275 @@
+{
+    "laptop":{
+        "state":"False",
+        "price":{
+            "montly_price":500
+        },
+        "affect":{
+            "people":"20",
+            "feel":"30"
+        }
+    },
+
+    "pet":{
+        "state":"False",
+        "price":{
+            "montly_price":100
+        },
+        "affect":{
+            "people":"5",
+            "feel":"-1"
+        }
+    },
+
+    "smoke_part":{
+        "state":"False",
+        "price":{
+            "now":1500
+        },
+        "affect":{
+            "feel":"30"
+        }
+    },
+
+    "music":{
+        "state":"False",
+        "price":{
+            "now":800
+        },
+        "affect":{
+            "feel":"20"
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    },
+
+    "":{
+        "state":"False",
+        "price":{
+            "montly_price":0
+        },
+        "affect":{
+            "":""
+        }
+    }
+
+
+}

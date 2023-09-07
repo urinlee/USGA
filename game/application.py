@@ -18,7 +18,7 @@ player.zoom=3
 print(camera.fov)
 
 Counter.counter()
-room = Entity(model='src/models/restaurant_mood', texture='src/models/restaurant_mood.png', rotation_y=180, scale=0.24)
+room = Entity(name="room", model='src/models/restaurant_mood', texture='src/models/restaurant_mood.png', rotation_y=180, scale=0.24)
 npc = NPC.npc(name="John")
 npc.wait_counter()
 #person = Entity(model='src/person.obj', scale=0.7, rotation_x=-90, x=5, z=-5, y=1, color=color.red)
@@ -29,6 +29,7 @@ npc.wait_counter()
 level = Level.Top_UI()
 side = Side.Side_Menu()
 money = Money.Money()
+
 print(level.position)
 level.position = (0, 0.42)
 
