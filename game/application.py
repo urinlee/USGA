@@ -4,8 +4,10 @@ from ext.edit_object import Editor
 from UI import app_window, Level, Money, Shop, Side
 
 
+import json
 
 
+Info={}
 
 app = Ursina()
 sky = Sky()#Sky(color=color.rgb(64, 64, 64))
@@ -13,12 +15,14 @@ sky = Sky()#Sky(color=color.rgb(64, 64, 64))
 player = player_camera.Camera(start_position=(20, 20, -20), speed=15)
 player.zoom=3
 
+with open("game/data/player_info.json", "r") as db_file:
+    Info = json.load(db_file)
 
 
 print(camera.fov)
 
 Counter.counter()
-room = Entity(name="room", model='src/models/restaurant_mood', texture='src/models/restaurant_mood.png', rotation_y=180, scale=0.24)
+room = Entity(name="room", model=f'src/models/restaurant_{Info["room"]}', texture=f'src/models/restaurant_{Info["room"]}.png', rotation_y=180, scale=0.24)
 npc = NPC.npc(name="John")
 npc.wait_counter()
 #person = Entity(model='src/person.obj', scale=0.7, rotation_x=-90, x=5, z=-5, y=1, color=color.red)
